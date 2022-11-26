@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tang.mapper.BookMapper">
+    <delete id="deleteByIds">
+        delete from book where id in
+            <foreach collection="ids" item="id" separator="," open="(" close=")">
+                         #{id}
+            </foreach>
+    </delete>
+
+    <select id="selectAll" resultType="com.tang.pojo.Book">
+        select * from book
+    </select>
+    <select id="selectByPageAndCondition" resultType="com.tang.pojo.Book">
+        select * from book
+        <where>
+            <if test="book.title != null and book.title != ''">
+                and title like  #{book.title}
+            </if>
+            <if test="book.author != null and book.author != ''">
+                and author like #{book.author}
+            </if>
+        </where>
+        limit #{begin},#{size}
+    </select>
+    <select id="selectTotalCountByCondition" resultType="java.lang.Integer">
+        select count(*) from book
+        <where>
+            <if test="title != null and title != ''">
+                and title like  #{title}
+            </if>
+            <if test="author != null and author != ''">
+                and author like #{author}
+            </if>
+        </where>
+    </select>
+</mapper>

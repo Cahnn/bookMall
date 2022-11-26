@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link href="css/login.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="loginDiv">
+    <form action="/request-demo/LoginServlet" id="form">
+        <h1 id="loginMsg">LOGIN IN</h1>
+        <table>
+            <tr>
+                <td>用户名</td>
+                <td class="inputs">
+                    <input id="username" name="username" type="text">
+                </td>
+
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td class="inputs">
+                    <input id="password" name="password" type="password">
+                </td>
+            </tr>
+        </table>
+
+        <div id="subDiv">
+            <input type="submit" class="button" value="登录">
+            <input type="reset" class="button" value="重置">&nbsp;&nbsp;&nbsp;
+            <a href="register.jsp">没有账号？点击注册</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

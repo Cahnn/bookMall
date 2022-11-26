@@ -1,0 +1,17 @@
+com\tang\service\impl\BookServiceImpl.class
+com\tang\mapper\BookMapper.class
+com\tang\pojo\PageBean.class
+com\tang\web\servlet\LoginServlet.class
+com\tang\util\CheckCodeUtil.class
+com\tang\service\UserService.class
+com\tang\web\servlet\LogoutServlet.class
+com\tang\pojo\Book.class
+com\tang\pojo\User.class
+com\tang\web\servlet\CheckCodeServlet.class
+com\tang\web\filter\LoginFilter.class
+com\tang\web\servlet\RegServlet.class
+com\tang\web\servlet\BaseServlet.class
+com\tang\mapper\UserMapper.class
+com\tang\util\SqlSessionFactoryUtils.class
+com\tang\web\servlet\BookServlet.class
+com\tang\service\BrandService.class
